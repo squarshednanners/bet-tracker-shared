@@ -1,13 +1,16 @@
 package com.wd.model;
 
 import java.io.Serializable;
+import java.util.SortedMap;
 
 public class GameStatus implements Serializable {
   private static final long serialVersionUID = 1L;
   private String status;
   private GameStatusEnum progress;
   private Double homeScore;
+  private SortedMap<Integer, Double> homeScoreBreakdown;
   private Double awayScore;
+  private SortedMap<Integer, Double> awayScoreBreakdown;
   private String clock;
 
   public String getStatus() {
@@ -34,12 +37,28 @@ public class GameStatus implements Serializable {
     this.homeScore = homeScore;
   }
 
+  public SortedMap<Integer, Double> getHomeScoreBreakdown() {
+    return homeScoreBreakdown;
+  }
+
+  public void setHomeScoreBreakdown(SortedMap<Integer, Double> homeScoreBreakdown) {
+    this.homeScoreBreakdown = homeScoreBreakdown;
+  }
+
   public Double getAwayScore() {
     return awayScore;
   }
 
   public void setAwayScore(Double awayScore) {
     this.awayScore = awayScore;
+  }
+
+  public SortedMap<Integer, Double> getAwayScoreBreakdown() {
+    return awayScoreBreakdown;
+  }
+
+  public void setAwayScoreBreakdown(SortedMap<Integer, Double> awayScoreBreakdown) {
+    this.awayScoreBreakdown = awayScoreBreakdown;
   }
 
   public String getClock() {
