@@ -1,6 +1,7 @@
 package com.wd.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -13,7 +14,7 @@ public class Sport implements Serializable {
   private String id;
   private String key;
   private String name;
-  private List<League> leagues;
+  private List<League> leagues = new ArrayList<>();
 
   public String getId() {
     return id;

@@ -15,6 +15,7 @@ public class BaseEvent implements Serializable {
   private String id;
   private String linkSource;
   private String linkId;
+  private List<EventLink> links = new ArrayList<>();
   private EventTypeEnum type;
   private String sport;
   private Long time;
@@ -42,6 +43,14 @@ public class BaseEvent implements Serializable {
 
   public void setLinkId(String linkId) {
     this.linkId = linkId;
+  }
+
+  public List<EventLink> getLinks() {
+    return links;
+  }
+
+  public void setLinks(List<EventLink> links) {
+    this.links = links;
   }
 
   public EventTypeEnum getType() {
