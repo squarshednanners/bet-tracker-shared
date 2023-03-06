@@ -20,6 +20,8 @@ public class Team implements Serializable {
   private String abbreviation;
   private String location;
   private String logo;
+  private String color;
+  private String alternateColor;
 
   public String getId() {
     return id;
@@ -91,6 +93,22 @@ public class Team implements Serializable {
 
   public void setLogo(String logo) {
     this.logo = logo;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public String getAlternateColor() {
+    return alternateColor;
+  }
+
+  public void setAlternateColor(String alternateColor) {
+    this.alternateColor = alternateColor;
   }
 
 }
